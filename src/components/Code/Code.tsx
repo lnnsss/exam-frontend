@@ -20,13 +20,19 @@ const Code = () => {
                         className={s.codeInput}
                         placeholder="ABC123"
                     />
-                    <button className={s.searchButton}>Искать</button>
+                    <button className={s.searchButton}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#ffffff"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             className="icon icon-search">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
                 </div>
 
                 <div className={`${s.hints} ${animateHints ? s.hintsVisible : ''}`}>
                     <div className={s.hintBox}>Спросите код у преподавателя</div>
                     <div className={s.hintBox}>Каждому тесту соответствует уникальный код</div>
-                    <div className={s.hintBox}>Код может быть использован только один раз</div>
                     <div className={s.hintBox}>Проверьте правильность ввода перед отправкой</div>
                 </div>
             </div>

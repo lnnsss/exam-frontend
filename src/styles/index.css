@@ -1,6 +1,6 @@
 /*----шрифты-------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Comic+Relief:wght@400;700&display=swap');
 
 /*----переменные-------------------------------------------*/
 
@@ -9,13 +9,13 @@
   --white: #ffffff;
   --lightGrey: #e6e6e6;
   --grey: #abb4bb;
-  --green: #238246;
-  --mainColor: #B9D7B6;
+  --green: #2A9134;
+  --mainColor: #3FA34D;
   --black: #000000;
   --baseFontSize: 16px;
   --baseFontWeight: 400;
   --baseFontFamily: "Cascadia Mono", sans-serif;
-  --secondFontFamily: "Lobster", sans-serif;
+  --secondFontFamily: "Comic Relief", sans-serif;
 }
 
 /*----основа-------------------------------------------*/

@@ -1,14 +1,5 @@
-:root {
-    --mainColor: #B6E2C1;
-    --white: #ffffff;
-    --green: #B6E2C1;
-    --baseFontFamily: "Cascadia Mono", sans-serif;
-    --secondFontFamily: "Lobster", sans-serif;
-    --black: #000000;
-}
-
 .code {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 60px;
     position: relative;
     z-index: 1;
@@ -19,8 +10,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 1000px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, var(--mainColor) 0%, transparent 70%);
     filter: blur(160px);
@@ -47,11 +38,6 @@
     width: 22ch;
     animation: typing 2s steps(22);
     text-align: center;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 22ch }
 }
 
 .inputGroup {
@@ -93,11 +79,10 @@
     font-family: var(--baseFontFamily);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;
 }
 
 .searchButton:hover {
-    filter: none;
-    background-color: #a2d9b6;
     transform: scale(1.03);
 }
 
@@ -147,7 +132,7 @@
 }
 
 .hintBox:hover {
-    background-color: #a2d9b6;
+    filter: brightness(120%);
     transform: translateY(-4px) scale(1.04);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }

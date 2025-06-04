@@ -6,8 +6,11 @@ import { observer } from "mobx-react-lite";
 
 const Header: React.FC = observer(() => {
     const {
-        header: { isMenuOpen, toggleMenu, closeMenu }
+        header: { isMenuOpen, toggleMenu, closeMenu },
+        token: { token },
     } = useStores();
+
+    const isLoggedIn = !!token;
 
     return (
         <header className={s.header}>
@@ -20,7 +23,14 @@ const Header: React.FC = observer(() => {
                     <Link to="/code" className={s.link}>Код</Link>
                     <Link to="/tests" className={s.link}>Тесты</Link>
                     <Link to="/about" className={s.link}>О нас</Link>
-                    <Link to="/profile" className={s.link}>Личный кабинет</Link>
+                    {isLoggedIn ? (
+                        <Link to="/profile" className={s.link}>Личный кабинет</Link>
+                    ) : (
+                        <>
+                            <Link to="/registration" className={s.link}>Регистрация</Link>
+                            <Link to="/login" className={s.link}>Вход</Link>
+                        </>
+                    )}
                 </nav>
 
                 <button className={s.burger} onClick={toggleMenu}>
@@ -45,7 +55,14 @@ const Header: React.FC = observer(() => {
                     <Link to="/code" className={s.link} onClick={closeMenu}>Код</Link>
                     <Link to="/tests" className={s.link} onClick={closeMenu}>Тесты</Link>
                     <Link to="/about" className={s.link} onClick={closeMenu}>О нас</Link>
-                    <Link to="/profile" className={s.link} onClick={closeMenu}>Личный кабинет</Link>
+                    {isLoggedIn ? (
+                        <Link to="/profile" className={s.link} onClick={closeMenu}>Личный кабинет</Link>
+                    ) : (
+                        <>
+                            <Link to="/registration" className={s.link} onClick={closeMenu}>Регистрация</Link>
+                            <Link to="/login" className={s.link} onClick={closeMenu}>Вход</Link>
+                        </>
+                    )}
                 </nav>
             </div>
         </header>
