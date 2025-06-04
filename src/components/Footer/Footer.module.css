@@ -1,0 +1,46 @@
+.footer {
+    background-color: #ecfdf5;
+    color: #065f46;
+    padding: 2rem 1rem 1rem;
+    border-top: 1px solid #d1fae5;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #065f46;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #047857;
+}
+
+.copy {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #047857;
+}

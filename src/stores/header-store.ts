@@ -10,6 +10,9 @@ class HeaderStore {
     toggleMenu = (): void => {
         this.isMenuOpen = !this.isMenuOpen
     }
+    closeMenu = (): void => {
+        this.isMenuOpen = false;
+    }
 }
 
 export default new HeaderStore()
