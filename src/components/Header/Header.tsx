@@ -20,11 +20,13 @@ const Header: React.FC = observer(() => {
                 </div>
 
                 <nav className={s.navDesktop}>
-                    <Link to="/code" className={s.link}>Код</Link>
-                    <Link to="/tests" className={s.link}>Тесты</Link>
+                    <Link to="/code" className={s.link}>Ввести код</Link>
                     <Link to="/about" className={s.link}>О нас</Link>
                     {isLoggedIn ? (
-                        <Link to="/profile" className={s.link}>Личный кабинет</Link>
+                        <>
+                            <Link to="/tests" className={s.link}>Мои тесты</Link>
+                            <Link to="/profile" className={s.link}>Личный кабинет</Link>
+                        </>
                     ) : (
                         <>
                             <Link to="/registration" className={s.link}>Регистрация</Link>

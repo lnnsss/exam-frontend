@@ -1,0 +1,142 @@
+.about {
+    background-color: inherit;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out both;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--secondFontFamily);
+    margin-bottom: 20px;
+    color: var(--mainColor);
+    animation: slideDown 0.6s ease-out;
+}
+
+.subtitle {
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 40px;
+    opacity: 0.85;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.feature {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.feature:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.feature p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.howItWorks {
+    max-width: 700px;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease;
+}
+
+.howItWorks h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--mainColor);
+}
+
+.howItWorks ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.howItWorks li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.howItWorks li:hover {
+    color: var(--mainColor);
+}
+
+.cta {
+    margin-top: 30px;
+    animation: fadeInUp 0.6s ease-in;
+}
+
+.ctaButton {
+    font-size: 18px;
+    background-color: var(--mainColor);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    font-family: var(--secondFontFamily);
+}
+
+.ctaButton:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+}
+
+.ctaButton:active {
+    transform: scale(0.97);
+    filter: brightness(90%);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
