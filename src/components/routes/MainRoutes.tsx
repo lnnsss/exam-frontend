@@ -5,7 +5,7 @@ import Main from "../pages/user/MainPage.tsx";
 import Code from "../pages/user/CodePage.tsx";
 import About from "../pages/user/AboutPage.tsx";
 import Tests from "../pages/user/TestsPage.tsx";
-import CreateTest from "../pages/user/CreateTestPage.tsx";
+import AddTest from "../AddTest/AddTest.tsx";
 import Registration from "../pages/user/RegistrationPage.tsx";
 import Login from "../pages/user/LoginPage.tsx";
 import Account from "../pages/user/AccountPage.tsx";
@@ -28,7 +28,7 @@ const MainRoutes = () => {
             <Route element={<ProtectedRoute isProtected={true} redirectTo="/registration" />}>
                 <Route path="/profile" element={<Account />} />
                 <Route path="/tests" element={<Tests />} />
-                <Route path="/tests/create" element={<CreateTest />} />
+                <Route path="/tests/add" element={<AddTest />} />
             </Route>
 
             {/* Перенаправление для несуществующих страниц */}
