@@ -1,0 +1,156 @@
+.tests {
+    font-family: var(--baseFontFamily);
+    padding: 40px 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.tests__container {
+    animation: fadeIn 1s ease-in-out both;
+}
+
+.tests__title {
+    font-family: var(--secondFontFamily);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--mainColor);
+    animation: slideDown 0.6s ease-out;
+}
+
+.tests__controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tests__btn,
+.tests__btnCreate {
+    font-family: var(--baseFontFamily);
+    background-color: var(--mainColor);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    min-width: 120px;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tests__btn:hover,
+.tests__btnCreate:hover {
+    background-color: var(--green);
+}
+
+.tests__btn:active,
+.tests__btnCreate:active {
+    background-color: #1f6b24;
+}
+
+.tests__btn.active {
+    background-color: var(--green);
+    pointer-events: none;
+    cursor: default;
+}
+
+.tests__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tests__card {
+    border: 1px solid var(--lightGrey);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.6s ease-out both;
+    transition: box-shadow 0.3s ease;
+}
+
+.tests__card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tests__cardTitle {
+    font-family: var(--secondFontFamily);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.tests__cardInfo {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--grey);
+}
+
+.accessCode {
+    display: inline-block;
+    font-family: var(--secondFontFamily);
+    font-weight: bold;
+    background-color: var(--lightGrey);
+    color: var(--black);
+    padding: 2px 6px;
+    margin: 0 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.accessCode:hover {
+    background-color: var(--mainColor);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.tests__empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--grey);
+    grid-column: 1/-1;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
